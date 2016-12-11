@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"-->
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <link rel="stylesheet" href="css/github-dark.css">
+  <!--link rel="stylesheet" href="css/index.css"-->
+
+  <link rel="stylesheet" href="css/main.css" >
+  <link rel="stylesheet" href="css/elearning.main.css">
+
+  <title>Johnatan Dante Homepage</title>
+
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script-->
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <!--script src="app/lib/respond.js"></script-->
+
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-resource/angular-resource.min.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
+  <script src="app/lib/ui-bootstrap-tpls.js"></script>
+  <script src="app/mainApp.js"></script>
+  <script src="app/controllers/mainControllers.js"></script>
+  <script src="app/controllers/elearningControllers.js"></script>
+  <script src="app/controllers/profileControllers.js"></script>
+  <script src="app/services/localDataService.js"></script>
+  <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <!--[if lt IE 8]>
+    <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+</head>
+
+<body>
+  <div id="header">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-collapse-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand fork" href="https://github.com/johnatandante" target="_blank">View On GitHub</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="portfolio-collapse-menu">
+          <ul class="nav navbar-nav">
+            <li><a href="/#/home">Home</a></li>
+            <li><a href="/#/elearning">Continuous Learning</a></li>
+            <li><a href="/#/about">About</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+  </div>
+  <!-- end header -->
+
+  <div class="container" ng-app="Portfolio" ng-controller="mainController">
+    <div ng-view> </div>
+  </div>
+
+  <div class="wrapper container-fluid">
+    <section>
+      <!--code>gh-pages</code-->
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <a id="About"></a>
+      <div id="title">
+        <span class="credits right">Hosted on GitHub Pages</span>
+        <span class="credits left">Project maintained by <a href="https://github.com/johnatandante">johnatandante</a></span>
+        </div>
+    </div>
+  </footer>
+
+  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+</body>
+
+</html>
