@@ -1,0 +1,59 @@
+﻿<home class="panel">
+    <h2>Result Viewer</h2>
+
+    <h3>File input</h3>
+    <form id="inputform" class="form-inline" action="/api/Evaluate/" method="post" enctype="multipart/form-data">
+        <div class="panel">
+            <span class="form-control form-control-container">
+                <span class="btn btn-default btn-file">
+                    Browse <input type="file" id="sourceFile" onchange="angular.element(this).scope().file_changed(this, 'sourceFile')">
+                </span>
+                <span ng-show="!result.selectedFile['sourceFile']">Select a file</span>
+                <span ng-show="result.selectedFile['sourceFile']">File selected: {{result.selectedFile['sourceFile']}}</span>
+            </span>
+            <span class="form-control form-control-container">
+                <span class="btn btn-default btn-file">
+                    Browse <input type="file" id="filterFile" onchange="angular.element(this).scope().file_changed(this, 'filterFile')">
+                </span>
+                <span ng-show="!result.selectedFile['filterFile']">Select a file</span>
+                <span ng-show="result.selectedFile['filterFile']">File selected: {{result.selectedFile['filterFile']}}</span>
+            </span>
+            <input class="form-control btn btn-default" type="button" ng-click="result.Upload()" value="Upload Data" />
+            <input class="btn btn-default btn-right" type="button" ng-click="result.Clear()" value="Clear Data" />
+
+        </div>
+    </form>
+    
+    <h3>Risultati</h3>
+    <div ng-show="!result.results">
+        <div class="panel">
+            <p>Please upload files first</p>
+        </div>
+    </div>
+    <div ng-show="result.results">
+        <form class="form-inline searchInlineForm">
+            <div>
+                <label>Filter for: </label>
+                <input class="form-control" type="text" title="Search activity" ng-model="result.query" />
+            </div>
+        </form>
+
+        <div class="panel">
+            <ul class="list-group plannedActivityList">
+                <li class="list-group-item" ng-repeat="resultItem in result.results | filterimporto: result.query">
+                    <planned-activity-item>
+                        <!--label class="h4 spacer-post">Risultato estrazione:</label-->
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon3">Orario:</span>
+                            <input type="datetime" class="form-control" aria-describedby="basic-addon3" ng-model="resultItem.orario" readonly/>
+                            <span class="input-group-addon" id="basic-addon3">Importo Totale:</span>
+                            <input type="text" class="form-control" aria-describedby="basic-addon3" ng-model="resultItem.importo" readonly/>
+                            <span class="input-group-addon" id="basic-addon3">Numero Totale:</span>
+                            <input type="text" class="form-control" aria-describedby="basic-addon3" ng-model="resultItem.numero" readonly/>
+                        </div>
+                    </planned-activity-item>
+                </li>
+            </ul>
+        </div>
+    </div>
+</planned-activities>

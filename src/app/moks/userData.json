@@ -1,0 +1,19 @@
+﻿{
+    "userInfo": {
+        "name": "Dante",
+        "lastName": "Del Favero",
+        "nickName": "JohnD",
+        "dateBirth": "1981-09-27",
+        "from": "Trieste",
+        "bestWishes": "Going hungry",
+        "loginHistory": [
+            { "when": "2015-09-26 08:00" },
+            { "when": "2015-09-27 08:00" },
+            { "when": "2015-09-28 08:00" },
+            { "when": "2015-09-29 08:00" }
+        ],
+        "username" : "dante",
+        "password" : "dante"
+
+    }
+}
