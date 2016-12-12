@@ -1,8 +1,32 @@
-﻿let mainControllers = angular.module('mainControllers', ['localDataService']);
+﻿let mainControllers = angular.module('mainControllers', ['localDataService', 'ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 
 mainControllers.controller('mainController',
-    ['$scope', function ($scope) {
+    ['$scope', 'Carousel-Data', function ($scope, CarouselData) {
+        let thisObj = this;
+
+        $scope.myInterval = 2400;
+        $scope.noWrapSlides = false;
+        $scope.active = 0;
+        thisObj.currentId = 0;
         
+        this.slides = [];
+
+        CarouselData.query(function (data) {
+            if (!data) {
+                thisObj.slides = [];
+                return;
+            }
+
+            for(let item of data) {
+                thisObj.slides.push({
+                    title: item.title,
+                    image: item.image,
+                    text: item.text,
+                    id: thisObj.currentId++
+                });
+            }
+        });
+
     }]);
 
 mainControllers.filter('isvisible', function () {

@@ -24,23 +24,21 @@ app.config(['$routeProvider', '$locationProvider',
                 controller: "elearningController",
                 controllerAs: "elearning"
             }).
+            when('/index', {
+                redirectTo: '/home'
+            }).
             when('/', {
-                templateUrl: "app/views/home.html",
-                controller: "mainController",
-                controllerAs: "home"
+                redirectTo: '/home'
             })
-            //.otherwise({
-            //    redirectTo: '/',
-            //    templateUrl: "app/views/home.html",
-            //    controller: "mainController",
-            //    controllerAs: "home"
-            //})
+            .otherwise({
+                redirectTo: '/'
+            })
             ;
 
-        //$locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(true);
         // .hashPrefix('!');
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false
-        });
+        //$locationProvider.html5Mode({
+        //    enabled: true,
+        //    requireBase: false
+        //});
     }]);

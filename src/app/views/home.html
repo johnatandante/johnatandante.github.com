@@ -1,48 +1,17 @@
 <home>
-  <div id="portfolio-carousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#portfolio-carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#portfolio-carousel" data-slide-to="1"></li>
-      <li data-target="#portfolio-carousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>The enjoy of Coding</h1>
-            <p><em>Basic</em>, <em>C</em>, <em>Visual Basic</em>, <em>Java</em>, <em>Python</em>, <em>C#</em> and either <em>JavaScript</em>:
-              who cares: I enjoy code in every form.</p>
-          </div>
+    <div id="ng-portfolio-carousel" class="carousel">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="current in home.slides track by current.id" index="current.id">
+                <div >
+                    <img ng-src="{{current.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h1>{{current.title}}</h1>
+                        <p>{{current.text}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>User Design and Gaming Experience</h1>
-            <p>User comes first and interactivity must be enjoyable: this is my vision of User Inteface.</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>The importance of beeing Honest</h1>
-            <p>Clarity in code writing is the best way to build a mainteinable application. Code must always tell the truth
-              and coders must trust on it.</p>
-          </div>
-        </div>
-      </div>
     </div>
-    <a class="left carousel-control" href="#portfolio-carousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#portfolio-carousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
   <div class="marketing">
     <div class="container">
       <div class="row">
@@ -57,7 +26,7 @@
           <p>The best way to start coding are design patterns applied in several coding languages</p>
         </div>
         <div class="col-md-4">
-          <a href="elearning.html">
+          <a href="/#/elearning">
           <span class="glyphicon glyphicon-education"></span>
           </a>
           <h2>Continuos Learning</h2>

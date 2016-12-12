@@ -1,7 +1,7 @@
-﻿var localDataService = angular.module('localDataService', ['ngResource']);
+﻿let localDataService = angular.module('localDataService', ['ngResource']);
 
-var randomize = true;
-var urlRandom = "";
+let randomize = true;
+let urlRandom = "";
 if (randomize)
     urlRandom = "?" + +Math.random();
 
@@ -18,6 +18,16 @@ localDataService.factory('ResultData', ['$resource',
 localDataService.factory('Menu', ['$resource',
   function ($resource) {
       return $resource('app/moks/menu.json' + urlRandom, {}, {
+          query: {
+              method: 'GET',
+              isArray: true
+          }
+      });
+  }]);
+
+localDataService.factory('Carousel-Data', ['$resource',
+  function ($resource) {
+      return $resource('app/moks/carousel.data.json' + urlRandom, {}, {
           query: {
               method: 'GET',
               isArray: true

@@ -2,15 +2,17 @@ let elearningControllers = angular.module('elearningControllers', ['localDataSer
 
 elearningControllers.controller('elearningController',
     ['$scope', function ($scope) {
+        let thisObj = this;
 
         this.LoadCodeSchoolData = function () {
+            
             $.ajax({
                 url: 'https://www.codeschool.com/users/1808758.json',
                 dataType: 'jsonp',
                 success: function (response) {
                     // handle response
-                    this.addProfile(response.user);
-                    this.addCourses(response.courses.completed);
+                    thisObj.addProfile(response.user);
+                    thisObj.addCourses(response.courses.completed);
                 },
                 failed: function (error) {
                     $("#badges").append('<div>Sorry: can\'t retrive any badges</div>');

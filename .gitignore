@@ -134,3 +134,6 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/src/bin
+/src/obj/Debug
+/src/johnatandante.github.com.csproj.user
