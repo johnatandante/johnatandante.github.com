@@ -5,7 +5,6 @@
 
 # Build results
 deploy/
-src/lib/
 node_modules/
 
 # Roslyn cache directories
