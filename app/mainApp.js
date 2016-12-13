@@ -4,6 +4,7 @@
         'elearningControllers',
         'profileControllers',
         'ngRoute',
+        //'ngMdIcons',
     ]);
 // Routing 
 app.config(['$routeProvider', '$locationProvider',
