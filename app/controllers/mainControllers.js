@@ -7,6 +7,11 @@ mainControllers.controller('mainController',
         $scope.myInterval = 2400;
         $scope.noWrapSlides = false;
         $scope.active = 0;
+
+        $scope.isNavCollapsed = true;
+        $scope.isCollapsed = false;
+        //$scope.isCollapsedHorizontal = false;
+
         thisObj.currentId = 0;
         
         this.slides = [];
