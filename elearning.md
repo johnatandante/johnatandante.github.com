@@ -1,2 +1,2 @@
-﻿redirect_to:
-  - /#/elearning
+title: Elearning
+redirect_to: /#/elearning
