@@ -1,2 +1,4 @@
-title: Elearning
-redirect_to: /#/elearning
+---
+permalink: /elearning
+redirect_to: '/#/elearning'
+---
