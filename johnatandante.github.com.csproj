@@ -44,7 +44,11 @@
     <Content Include="css\ie.css" />
     <Content Include="css\main.css" />
     <Content Include="css\normalize.css" />
+    <Content Include="images\angular.png" />
+    <Content Include="images\bootstrap.png" />
     <Content Include="images\bullet.png" />
+    <Content Include="images\GitHub-Mark-32px.png" />
+    <Content Include="images\GitHub-Mark-64px.png" />
     <Content Include="images\hr.gif" />
     <Content Include="images\nav-bg.gif" />
     <Content Include="index.html" />

@@ -5,6 +5,34 @@
   margin-bottom: 0;
 }
 
+.img-64{
+    padding: 2em;
+    min-width:64px;
+}
+
+.powered-by{
+    padding-top: 1.5em;
+}
+
+.github-icon-bkg{
+    background-image: url("../images/GitHub-Mark-64px.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 4em;    
+}
+.angular-icon-bkg{
+    background-image: url("../images/angular.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 4em;
+}
+.bootstrap-icon-bkg{
+    background-image: url("../images/bootstrap.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 4em;
+}
+
 /* CUSTOMIZED CAROUSEL
 -------------------------------------------------- */
 
@@ -87,6 +115,14 @@ footer {
   color: white;
   text-shadow: 1px 1px 1px black;
   padding: 20px 0;
+  min-width:320px;
+}
+
+.credits{
+    text-align:center;
+    vertical-align: central;
+    text-align: left;
+    padding-left: 1em;
 }
 
 /* RESPONSIVE CSS
