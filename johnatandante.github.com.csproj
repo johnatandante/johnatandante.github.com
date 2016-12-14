@@ -64,13 +64,20 @@
     <Content Include="app\lib\angular\angular-sanitize.min.js.map" />
     <Content Include="app\lib\angular-resource\angular-resource.min.js.map" />
     <Content Include="app\lib\angular-route\angular-route.min.js.map" />
+    <Content Include="elearning.md" />
+    <Content Include="about.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+    <Content Include="_plugins\jekyll-redirect-from.rb" />
+    <Content Include="_plugins\jekyll-redirect-from\redirector.rb" />
+    <Content Include="_plugins\jekyll-redirect-from\redirect_page.rb" />
+    <Content Include="_plugins\jekyll-redirect-from\version.rb" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>

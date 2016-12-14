@@ -1,0 +1,2 @@
+﻿redirect_to:
+  - ./#/elearning
