@@ -48,6 +48,9 @@ elearningControllers.controller('elearningController',
             );
 
             for (let course of courses) {
+                if(course.title.indexOf('Try') === 0)
+                    continue;
+                
                 let $course = $('<div />', {
                     'class': "course"
                 }).appendTo($badges);
